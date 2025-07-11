@@ -25,7 +25,6 @@ RedRoot includes an extensive suite of offensive tools:
 - ✅ Reverse Shell Listener
 - ✅ Windows/Linux Backdoor Creator
 - ✅ Phishing Toolkit & Launcher
-- ✅ Voice Command Interface (Jarvis-style)
 
 ## 🧠 Why RedRoot?
 
