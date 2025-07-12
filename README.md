@@ -51,7 +51,7 @@ RedRoot was born out of necessity. Instead of juggling countless tools across se
 ### Install
 
 ```bash
-git clone https://github.com/yourusername/RedRoot.git
+git clone https://github.com/Agampreet-Singh/RedRoot.git
 cd RedRoot
 python3 installer.py
 ```
