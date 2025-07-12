@@ -81,3 +81,6 @@ So no, it's not just a suit of tools.
 
 ### Note
 Use this Tool for Educational purpose i am not responsible if you doing any against laws activities
+
+## License
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
