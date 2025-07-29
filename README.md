@@ -57,8 +57,8 @@ These are **not** available in RedRoot Lite. Attempting to run them will show a 
 ### Install
 
 ```bash
-git clone https://github.com/Agampreet-Singh/RedRoot-Lite.git
-cd RedRoot-Lite
+git clone https://github.com/Agampreet-Singh/RedRoot.git
+cd RedRoot
 python3 installer.py 
 ```
 
