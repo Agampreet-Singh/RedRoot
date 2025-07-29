@@ -23,7 +23,7 @@ These tools are completely open in Lite and safe for educational and controlled 
 
 ## 🔒 Locked Modules
 
-These are **not** available in RedRoot Lite. Attempting to run them will show a lock screen with instructions to contact the developer.
+These are **not** available in RedRoot Lite. Attempting to run them will show a lock screen with instructions to contact the Mr. Agampreet
 
 - 🔒 SQL Injection Exploitation  
 - 🔒 XSS Scanner  
