@@ -36,7 +36,7 @@ def animate_typing_banner():
         styled_text.append(char, style=f"bold {color}")
         console.print(styled_text, end="\r", soft_wrap=True)
         time.sleep(0.03)
-    console.print()  # newline
+    console.print()
     time.sleep(0.2)
 
 def handle_client(client_socket, address):
@@ -48,17 +48,23 @@ def handle_client(client_socket, address):
                 continue
             client_socket.send(cmd.encode() + b'\n')
 
+            client_socket.settimeout(1.0)  # Set short timeout
             data = b""
-            while True:
-                chunk = client_socket.recv(4096)
-                data += chunk
-                if len(chunk) < 4096:
-                    break
+            try:
+                while True:
+                    chunk = client_socket.recv(4096)
+                    if not chunk:
+                        break
+                    data += chunk
+            except socket.timeout:
+                pass  # End of command output
+            finally:
+                client_socket.settimeout(None)
 
             if data:
                 console.print(data.decode(errors='ignore'), end='')
             else:
-                break
+                console.print("[bold red]No output or command failed.[/bold red]")
     except Exception:
         console.print(f"[bold red][!] Connection with {address[0]} closed.[/bold red]")
     finally:
@@ -81,8 +87,7 @@ def start_listener(host, port):
 
 if __name__ == "__main__":
     animate_typing_banner()
-
-    parser = argparse.ArgumentParser(description="Redroot Reverse shell listener")
+    parser = argparse.ArgumentParser(description="RedRoot Reverse Shell Listener")
     parser.add_argument('--host', default='0.0.0.0', help='IP to bind (default: 0.0.0.0)')
     parser.add_argument('--port', type=int, required=True, help='Port to listen on')
     args = parser.parse_args()
