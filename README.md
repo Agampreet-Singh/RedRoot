@@ -83,7 +83,7 @@ This includes:
 
 ---
 # AI Update — F.R.I.D.A.Y (Advanced AI Core of RedRoot)
-# ![F.R.I.D.A.Y](AI-friday.png) 
+# ![F.R.I.D.A.Y](AI-friday1.png) 
 
 **F.R.I.D.A.Y**, the intelligent AI core powering RedRoot.
 
